@@ -8,8 +8,7 @@ body {
 
 html,
 body,
-app-root,
-.app-root-sidbar-container {
+app-root {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -17,4 +16,7 @@ app-root,
 app-root {
   display: flex;
   flex-direction: column;
+}
+.app-root-sidbar-container {
+  flex: 1;
 }
