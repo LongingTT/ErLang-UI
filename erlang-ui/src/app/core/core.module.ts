@@ -1,5 +1,6 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -10,7 +11,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
-  imports: [CommonModule, MatButtonModule, MatIconModule, MatToolbarModule],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+  ],
   exports: [HeaderComponent, FooterComponent, SidebarComponent],
 })
 export class CoreModule {

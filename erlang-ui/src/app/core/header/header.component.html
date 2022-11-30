@@ -1,9 +1,9 @@
 <!-- <mat-toolbar color="primary">header works!</mat-toolbar> -->
 <mat-toolbar color="primary">
-  <button mat-icon-button>
-    <mat-icon>sound_detection_dog_barking</mat-icon>
+  <button mat-button class="app-logo-btn">
+    <mat-icon svgIcon="erlang_dog"></mat-icon>
+    ErLang
   </button>
-  <span>ErLang</span>
   <span class="app-fill-remaining-space"> </span>
   <button mat-icon-button (click)="onChangeTheme()">
     <mat-icon *ngIf="!isDarkTheme">dark_mode</mat-icon>
