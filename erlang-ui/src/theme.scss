@@ -1,0 +1,49 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+// Define a light theme
+$app-teal-light-primary: mat.define-palette(mat.$teal-palette, A700);
+$app-teal-light-accent: mat.define-palette(mat.$teal-palette, A700);
+// The "warn" palette is optional and defaults to red if not specified.
+$app-teal-light-warn: mat.define-palette(mat.$red-palette);
+
+$app-teal-light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $app-teal-light-primary,
+      accent: $app-teal-light-accent,
+      warn: $app-teal-light-warn,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+// Define a dark theme
+$app-cyan-dark-primary: mat.define-palette(mat.$cyan-palette, A700);
+$app-cyan-dark-accent: mat.define-palette(mat.$cyan-palette, A700);
+// The "warn" palette is optional and defaults to red if not specified.
+$app-cyan-dark-warn: mat.define-palette(mat.$red-palette);
+
+$app-cyan-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $app-cyan-dark-primary,
+      accent: $app-cyan-dark-accent,
+      warn: $app-cyan-dark-warn,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+// Emit theme-dependent styles for common features used across multiple components.
+// Apply the light theme by default
+@include mat.core-theme($app-teal-light-theme);
+@include mat.all-component-themes($app-teal-light-theme);
+
+.app-cyan-dark-theme {
+  @include mat.core-theme($app-cyan-dark-theme);
+  @include mat.all-component-themes($app-cyan-dark-theme);
+}

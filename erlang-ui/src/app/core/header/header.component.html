@@ -1,20 +1,16 @@
 <!-- <mat-toolbar color="primary">header works!</mat-toolbar> -->
-<mat-toolbar>
+<mat-toolbar color="primary">
   <button mat-icon-button>
-    <mat-icon>menu</mat-icon>
+    <mat-icon>sound_detection_dog_barking</mat-icon>
   </button>
   <span>ErLang</span>
   <span class="app-fill-remaining-space"> </span>
-  <button mat-icon-button>
-    <mat-icon>dark_mode</mat-icon>
+  <button mat-icon-button (click)="onChangeTheme()">
+    <mat-icon *ngIf="!isDarkTheme">dark_mode</mat-icon>
+    <mat-icon *ngIf="isDarkTheme">light_mode</mat-icon>
   </button>
   <button mat-icon-button>
-    <mat-icon>light_mode</mat-icon>
-  </button>
-  <button mat-icon-button>
-    <mat-icon>person_outline</mat-icon>
-  </button>
-  <button mat-icon-button>
-    <mat-icon>manage_accounts</mat-icon>
+    <mat-icon *ngIf="!isSigned">person_outline</mat-icon>
+    <mat-icon *ngIf="isSigned">manage_accounts</mat-icon>
   </button>
 </mat-toolbar>
