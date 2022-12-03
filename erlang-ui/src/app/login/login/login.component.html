@@ -1,23 +1,35 @@
-<mat-card class="app-login-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-  </mat-card-header>
-  <img
-    mat-card-image
-    src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-    alt="Photo of a Shiba Inu"
-  />
-  <mat-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz
-      breeds of dog from Japan. A small, agile dog that copes very well with
-      mountainous terrain, the Shiba Inu was originally bred for hunting.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
+<div class="app-login-container">
+  <mat-card class="app-login-card">
+    <mat-card-header>
+      <div mat-card-avatar>
+        <mat-icon class="app-login-avatar-icon">account_circle</mat-icon>
+      </div>
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-subtitle>Good to see you again!</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field class="app-full-width">
+          <mat-label>User Name</mat-label>
+          <input type="text" matInput />
+        </mat-form-field>
+        <mat-form-field class="app-full-width">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput />
+        </mat-form-field>
+        <div class="app-recovery-password-container">
+        <a mat-button href="">Recovery Password</a></div>
+
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="app-full-width">
+        Login
+      </button>
+    </mat-card-actions>
+    <mat-card-actions>
+      Don't have an account yet?
+      <button mat-button color="primary">Sign Up</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
