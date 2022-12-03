@@ -8,6 +8,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent {
   @Output() toggleDarkTheme = new EventEmitter<boolean>();
   @Output() routeToLogin = new EventEmitter<void>();
+  @Output() routeToHome = new EventEmitter<void>();
 
   isDarkTheme: boolean = false;
   isSigned: boolean = false;
@@ -18,5 +19,8 @@ export class HeaderComponent {
   }
   onLogin() {
     this.routeToLogin.emit();
+  }
+  onHome() {
+    this.routeToHome.emit();
   }
 }

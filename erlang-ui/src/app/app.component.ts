@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(private router: Router) {}
+  constructor(private _router: Router) {}
 
   title = 'erlang-ui';
   darkTheme: boolean = false;
@@ -16,6 +16,9 @@ export class AppComponent {
     this.darkTheme = isDarkTheme;
   }
   onRouteToLogin() {
-    this.router.navigate(['login']);
+    this._router.navigate(['login']);
+  }
+  onRouteToHome() {
+    this._router.navigate(['']);
   }
 }
