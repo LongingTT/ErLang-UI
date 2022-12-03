@@ -1,5 +1,5 @@
 <div class="app-root-container" [class.app-cyan-dark-theme]="darkTheme">
-  <app-header (toggleDarkTheme)="onToggleDarkTheme($event)"></app-header>
+  <app-header (toggleDarkTheme)="onToggleDarkTheme($event)" (routeToLogin)="onRouteToLogin()"></app-header>
   <mat-sidenav-container class="app-root-sidbar-container">
     <mat-sidenav mode="side" #sidenav>
       <app-sidebar></app-sidebar>

@@ -1,4 +1,4 @@
-.app-login-container {
+.app-signin-container {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -9,17 +9,12 @@
   justify-content: center;
   align-items: center;
 }
-.app-login-card {
+.app-signin-card {
   width: 400px;
 }
-.app-login-avatar-icon {
+.app-signin-avatar-icon {
   width: 100%;
   height: 100%;
   font-size: 40px;
   text-align: center;
-}
-.app-forgot-password-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
 }

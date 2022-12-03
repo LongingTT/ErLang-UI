@@ -9,8 +9,10 @@
     <mat-icon *ngIf="!isDarkTheme">dark_mode</mat-icon>
     <mat-icon *ngIf="isDarkTheme">light_mode</mat-icon>
   </button>
-  <button mat-icon-button>
-    <mat-icon *ngIf="!isSigned">person_outline</mat-icon>
-    <mat-icon *ngIf="isSigned">manage_accounts</mat-icon>
+  <button mat-icon-button *ngIf="!isSigned" (click)="onLogin()">
+    <mat-icon>person_outline</mat-icon>
+  </button>
+  <button mat-icon-button *ngIf="isSigned">
+    <mat-icon>manage_accounts</mat-icon>
   </button>
 </mat-toolbar>
