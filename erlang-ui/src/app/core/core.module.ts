@@ -1,29 +1,32 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
+
+import { SharedModule } from '../shared/shared.module';
+
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
-
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
-  imports: [
-    CommonModule,
-    HttpClientModule,
-    MatButtonModule,
-    MatIconModule,
-    MatToolbarModule,
-  ],
+  imports: [HttpClientModule, SharedModule],
   exports: [HeaderComponent, FooterComponent, SidebarComponent],
 })
 export class CoreModule {
-  constructor(@Optional() @SkipSelf() parent: CoreModule) {
+  constructor(
+    @Optional() @SkipSelf() parent: CoreModule,
+    iconRegistry: MatIconRegistry,
+    sanitizer: DomSanitizer
+  ) {
     if (parent) {
       throw new Error('The CoreModule has already been loaded in pargram!');
     }
+
+    iconRegistry.addSvgIcon(
+      'erlang_dog',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/erlang_dog.svg')
+    );
   }
 }
