@@ -1,6 +1,4 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-header',
@@ -9,13 +7,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class HeaderComponent {
   @Output() toggleDarkTheme = new EventEmitter<boolean>();
-
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    iconRegistry.addSvgIcon(
-      'erlang_dog',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/erlang_dog.svg')
-    );
-  }
+  @Output() routeToLogin = new EventEmitter<void>();
+  @Output() routeToHome = new EventEmitter<void>();
 
   isDarkTheme: boolean = false;
   isSigned: boolean = false;
@@ -23,5 +16,11 @@ export class HeaderComponent {
   onChangeTheme() {
     this.isDarkTheme = !this.isDarkTheme;
     this.toggleDarkTheme.emit(this.isDarkTheme);
+  }
+  onLogin() {
+    this.routeToLogin.emit();
+  }
+  onHome() {
+    this.routeToHome.emit();
   }
 }

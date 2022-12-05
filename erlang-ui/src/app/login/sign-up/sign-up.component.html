@@ -1,0 +1,36 @@
+<div class="app-signin-container">
+  <mat-card class="app-signin-card">
+    <mat-card-header>
+      <div mat-card-avatar>
+        <mat-icon class="app-signin-avatar-icon">assignment_ind</mat-icon>
+      </div>
+      <mat-card-title>Sign Up</mat-card-title>
+      <mat-card-subtitle>Welcome to ErLang!</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <form>
+        <mat-form-field class="app-full-width">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput />
+        </mat-form-field>
+        <mat-form-field class="app-full-width">
+          <mat-label>User Name</mat-label>
+          <input type="text" matInput />
+        </mat-form-field>
+        <mat-form-field class="app-full-width">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput />
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" class="app-full-width">
+        Sign Up
+      </button>
+    </mat-card-actions>
+    <mat-card-actions>
+      Already have an account?
+      <a mat-button color="primary" routerLink="/login">Login</a>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { LoginModule } from './login/login.module';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 
@@ -12,10 +13,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    CoreModule,
     BrowserAnimationsModule,
     MatSidenavModule,
+    AppRoutingModule,
+    CoreModule,
+    LoginModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
