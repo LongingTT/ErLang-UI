@@ -1,7 +1,11 @@
 <div class="app-root-container" [class.app-cyan-dark-theme]="darkTheme">
-  <app-header (toggleDarkTheme)="onToggleDarkTheme($event)" (routeToLogin)="onRouteToLogin()" (routeToHome)="onRouteToHome()"></app-header>
+  <app-header
+    (toggleDarkTheme)="onToggleDarkTheme($event)"
+    (routeToLogin)="onRouteToLogin()"
+    (routeToHome)="onRouteToHome()"
+  ></app-header>
   <mat-sidenav-container class="app-root-sidbar-container">
-    <mat-sidenav mode="side" #sidenav>
+    <mat-sidenav mode="side" #sidenav opened>
       <app-sidebar></app-sidebar>
     </mat-sidenav>
     <mat-sidenav-content>

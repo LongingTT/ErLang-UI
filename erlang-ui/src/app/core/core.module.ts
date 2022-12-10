@@ -9,6 +9,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
+import { loadSvgResources } from '../utils/svg.util';
+
 @NgModule({
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
   imports: [HttpClientModule, SharedModule],
@@ -24,9 +26,6 @@ export class CoreModule {
       throw new Error('The CoreModule has already been loaded in pargram!');
     }
 
-    iconRegistry.addSvgIcon(
-      'erlang_dog',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/erlang_dog.svg')
-    );
+    loadSvgResources(iconRegistry, sanitizer);
   }
 }
