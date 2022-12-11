@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { LoginModule } from './login/login.module';
+import { ProjectModule } from './project/project.module';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 
@@ -18,6 +19,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     AppRoutingModule,
     CoreModule,
     LoginModule,
+    ProjectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
