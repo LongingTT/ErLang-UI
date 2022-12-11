@@ -18,9 +18,21 @@ export const loadSvgResources = (
     )
   );
   iconRegistry.addSvgIcon(
+    'erlang_tasks',
+    sanitizer.bypassSecurityTrustResourceUrl(
+      `${sidebarImgPath}/erlang_tasks.svg`
+    )
+  );
+  iconRegistry.addSvgIcon(
     'erlang_teams',
     sanitizer.bypassSecurityTrustResourceUrl(
       `${sidebarImgPath}/erlang_teams.svg`
+    )
+  );
+  iconRegistry.addSvgIcon(
+    'erlang_calendar',
+    sanitizer.bypassSecurityTrustResourceUrl(
+      `${sidebarImgPath}/erlang_calendar.svg`
     )
   );
 };
