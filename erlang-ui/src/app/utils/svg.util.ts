@@ -35,4 +35,10 @@ export const loadSvgResources = (
       `${sidebarImgPath}/erlang_calendar.svg`
     )
   );
+  iconRegistry.addSvgIcon(
+    'erlang_queries',
+    sanitizer.bypassSecurityTrustResourceUrl(
+      `${sidebarImgPath}/erlang_queries.svg`
+    )
+  );
 };
