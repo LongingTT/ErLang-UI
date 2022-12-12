@@ -1,2 +1,13 @@
-<p>project-list works!</p>
-<app-project-item *ngFor="let project of projects" [item]="project"></app-project-item>
+<div class="project-list-header">
+  <h3>Project</h3>
+  <button mat-button (click)="openNewProjectDialog()">
+    <mat-icon>add</mat-icon>New Project
+  </button>
+</div>
+<mat-divider></mat-divider>
+<div class="project-list-container">
+  <app-project-item
+    *ngFor="let project of projects"
+    [item]="project"
+  ></app-project-item>
+</div>

@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+}
+.project-list-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.project-list-container {
+  display: flex;
+  flex-flow: row wrap;
+}
